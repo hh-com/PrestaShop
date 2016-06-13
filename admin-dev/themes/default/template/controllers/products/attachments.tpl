@@ -83,7 +83,7 @@
 					<p>{l s='Available attachments:'}</p>
 					<select multiple id="selectAttachment2">
 						{foreach $attach2 as $attach}
-							<option value="{$attach.id_attachment}">{$attach.name}</option>
+							<option value="{$attach.id_attachment}">{$attach.file_name}</option>
 						{/foreach}
 					</select>
 					<a href="#" id="addAttachment" class="btn btn-default btn-block">
@@ -95,7 +95,7 @@
 					<p>{l s='Attachments for this product:'}</p>
 					<select multiple id="selectAttachment1" name="attachments[]">
 						{foreach $attach1 as $attach}
-							<option value="{$attach.id_attachment}">{$attach.name}</option>
+							<option value="{$attach.id_attachment}">{$attach.file_name}</option>
 						{/foreach}
 					</select>
 					<a href="#" id="removeAttachment" class="btn btn-default btn-block">
