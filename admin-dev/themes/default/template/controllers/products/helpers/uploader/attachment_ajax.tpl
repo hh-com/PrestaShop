@@ -93,6 +93,12 @@
 		}).on('fileuploadsubmit', function (e, data) {
 			var params = new Object();
 
+      // Modified START
+			var filename = data.fileInput.context.value.replace(/C:\\fakepath\\/i, '');
+			var filenameWithoutEnding = filename.replace(/\.[^/.]+$/, "");
+			$('#attachment_name_1').val(filenameWithoutEnding);
+			// Modified END
+			
 			$('input[id^="attachment_name_"]').each(function()
 			{
 				id = $(this).prop("id").replace("attachment_name_", "attachment_name[") + "]";
